@@ -1,6 +1,8 @@
 Welcome to Courseplay's documentation!
 ======================================
 
+.. lua:autoclass:: Clicker
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
