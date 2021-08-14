@@ -1,7 +1,7 @@
 Welcome to Courseplay's documentation!
 ======================================
 
-.. lua:autoclass:: Clicker
+.. lua:automodule:: Clicker
 
 .. toctree::
    :maxdepth: 2
