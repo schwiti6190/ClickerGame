@@ -1,0 +1,29 @@
+{
+	"resetSetting" : {
+		"base" : {
+			"y" : 1,
+			"x" : 1,
+			"label" : "Hard reset",
+			"callbacks" : {
+				"onClickCall" : "onClickReset"
+			},
+			"class" : "GuiButtonElement"
+		}
+	},
+	"saveSetting" : {
+		"base" : {
+			"y" : 30,
+			"x" : 1,
+			"label" : "Save now",
+			"callbacks" : {
+				"onClickCall" : "onClickSave"
+			},
+			"class" : "GuiButtonElement"
+		}
+	},
+
+
+	"back":{
+		"prefab" : "back"
+	}
+}

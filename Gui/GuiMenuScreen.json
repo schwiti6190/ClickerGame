@@ -1,0 +1,78 @@
+{
+	"title" : {
+		"prefab" : "title",
+		"base" : {
+			"label" : "Willkommen zu Koppers clicker"
+		}
+	},
+	"clicker" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 30,
+			"label" : "Clicker",
+			"callbacks" : {
+				"onClickCall" : "onClickClicker"
+			}
+		}
+	},
+	"upgrade" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 60,
+			"label" : "Upgrade",
+			"callbacks" : {
+				"onClickCall" : "onClickUpgrade"
+			}
+		}
+	},
+	"currency" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 90,
+			"label" : "Currency",
+			"callbacks" : {
+				"onClickCall" : "onClickCurrency"
+			}
+		}
+	},
+	"stats" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 120,
+			"label" : "Stats",
+			"callbacks" : {
+				"onClickCall" : "onClickStats"
+			}
+		}
+	},
+	"setting" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 150,
+			"label" : "Setting",
+			"callbacks" : {
+				"onClickCall" : "onClickSetting"
+			}
+		}
+	},
+	"shop" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 180,
+			"label" : "Shop",
+			"callbacks" : {
+				"onClickCall" : "onClickShop"
+			}
+		}
+	},
+	"quit" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 210,
+			"label" : "Quit",
+			"callbacks" : {
+				"onClickCall" : "onClickQuit"
+			}
+		}
+	}
+}

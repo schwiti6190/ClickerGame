@@ -1,0 +1,19 @@
+{
+	"twix" : {
+		"prefab": "shopItem",
+		"base" : {
+			"label" : "Twix",
+			"y" : 1
+		},
+		"price" : {
+			"y" : 1
+		}
+	},
+
+
+
+
+	"back":{
+		"prefab" : "back"
+	}
+}

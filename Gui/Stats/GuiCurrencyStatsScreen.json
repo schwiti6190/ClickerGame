@@ -1,0 +1,18 @@
+{
+	"title" : {
+		"prefab" : "totalStatsTitle"
+	},
+	
+	"totalCookieCoin" : {
+		"prefab" : "stat",
+		"base" : {
+			"label" : "Knop coin: ",
+			"y" : 30
+		}
+	},
+
+	"back" : {
+		"prefab" : "back"
+	}
+
+}

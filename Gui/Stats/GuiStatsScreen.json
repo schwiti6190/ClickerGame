@@ -1,0 +1,36 @@
+{
+	"clicker" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 1,
+			"label" : "Clicker",
+			"callbacks" : {
+				"onClickCall" : "onClickClicker"
+			}
+		}
+	},
+	"currency" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 30,
+			"label" : "Currency",
+			"callbacks" : {
+				"onClickCall" : "onClickCurrency"
+			}
+		}
+	},
+	"event" : {
+		"prefab" : "menuButton",
+		"base" : {
+			"y" : 60,
+			"label" : "Event",
+			"callbacks" : {
+				"onClickCall" : "onClickEvent"
+			}
+		}
+	},
+
+	"back" : {
+		"prefab" : "back"
+	}
+}

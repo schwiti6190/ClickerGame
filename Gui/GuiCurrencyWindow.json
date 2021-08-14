@@ -1,0 +1,18 @@
+{
+	"cookieDisplay" : {
+		"prefab" : "cookieDisplay"
+	},
+
+	"currency" : {
+		"prefab" : "currencyMarket"
+	},
+
+	"buyAmount" : {
+		"prefab" : "buyAmount"
+	},
+	
+	"back" : {
+		"prefab" : "back"
+	}
+
+}

@@ -1,0 +1,212 @@
+{
+	"itemWithPrice":{
+		"base":{
+			"x" : 1,
+			"callbacks":{
+				"textCall":"getText",
+				"onClickCall":"onClick",
+				"disabledCall":"isDisabled",
+				"visibleCall":"isVisible"
+			},
+			"class":"GuiButtonElement"
+		},
+		"price":{
+			"x" : 150,
+			"label":"Price: ",
+			"callbacks":{
+				"textCall":"getPriceText",
+				"disabledCall":"isDisabled",
+				"visibleCall":"isVisible"
+			},
+			"class":"GuiTextElement"
+		}
+	},
+	"item":{
+		"base":{
+			"x" : 1,
+			"callbacks":{
+				"textCall":"getText",
+				"onClickCall":"onClick",
+				"disabledCall":"isDisabled",
+				"visibleCall":"isVisible"
+			},
+			"class":"GuiButtonElement"
+		}
+	},
+	"shopItem" : {
+		"base":{
+			"x" : 1,
+			"callbacks":{
+				"onClickCall":"onClick",
+				"disabledCall":"isDisabled",
+				"visibleCall":"isVisible",
+				"activeCall" : "isActive"
+			},
+			"class":"GuiButtonElement"
+		},
+		"price":{
+			"x" : 150,
+			"label":"Price: ",
+			"callbacks":{
+				"textCall":"getPriceText",
+				"disabledCall":"isDisabled",
+				"visibleCall":"isPriceVisible",
+				"activeCall" : "isActive"
+			},
+			"class":"GuiTextElement"
+		}
+	},
+
+	"currency" : {
+		"base" : {
+			"x" : 1,
+			"callbacks" : {
+				"onClickCall" : "onClick",
+				"textCall":"getText",
+				"disabledCall":"isDisabled",
+				"visibleCall":"isVisible"
+			},
+			"class" : "GuiButtonElement"
+		}
+	},
+	"currencyMarket" : {
+		"base" : {
+			"x" : 1,
+			"y" : 30,
+			"callbacks" : {
+				"textCall":"getText",
+				"labelCall" : "getLabel"
+			},
+			"class" : "GuiTextElement"
+		},
+		"value" : {
+			"x" : 180,
+			"y" : 30,
+			"label" : "Value: ",
+			"callbacks" : {
+				"textCall":"getMarketValueText"
+			},
+			"class" : "GuiTextElement"
+		},
+		"plus" : {
+			"x" : 1,
+			"y" : 60,
+			"label" : "+++",
+			"callbacks" : {
+				"onClickCall" : "addValue",
+				"disabledCall" : "isDisabledAdd"
+			},
+			"class" : "GuiButtonElement"
+		},
+		"minus" : {
+			"x" : 60,
+			"y" : 60,
+			"label" : "- - -",
+			"callbacks" : {
+				"onClickCall" : "delValue",
+				"disabledCall" : "isDisabledDel"
+			},
+			"class" : "GuiButtonElement"
+		},
+		"price" : {
+			"x" : 180,
+			"y" : 1,
+			"label" : "Price: ",
+			"callbacks" : {
+				"textCall":"getPriceText"
+			},
+			"class" : "GuiTextElement"
+		},
+		"taxes" : {
+			"y":60,
+			"x":180,
+			"label":"Tax:",
+			"callbacks":{
+				"textCall":"getTaxText"
+			},
+			"class":"GuiTextElement"
+		}
+	},
+	"cookieDisplay" : {
+		"base" : {
+			"x" : 1,
+			"y" : 1,
+			"label" : "Knoppers: ",
+			"callbacks" : {
+				"textCall":"getText"
+			},
+			"class" : "GuiTextElement"
+		}
+	},
+	"back" : {
+		"base":{
+			"y":250,
+			"x":1,
+			"label":"back",
+			"callbacks":{
+				"onClickCall":"onClickBack"
+			},
+			"class":"GuiButtonElement"
+		}
+	},
+	"buyAmount":{
+		"base":{
+			"y":250,
+			"x":150,
+			"label":"Buy value: ",
+			"callbacks":{
+				"onClickCall":"changeBuyAmount",
+				"textCall":"getBuyAmountText"
+			},
+			"class":"GuiButtonElement"
+		}
+	},
+	"stat" : {
+		"base" : {
+			"y" : 1,
+			"x" : 1,
+			"label":"Stat: ",
+			"callbacks":{
+				"textCall":"getText"
+			},
+			"class":"GuiTextElement"
+		}
+	},
+
+	"menuButton" : {
+		"base" : {
+			"class" : "GuiButtonElement",
+			"x" : 1,
+			"y" : 1,
+			"label" : "Setting",
+			"callbacks" : {
+				"disabledCall" : "isDisabled",
+				"visibleCall" : "isVisible",
+				"onClickCall" : "onClickSetting"
+			}
+		}
+	},
+	"title" : {
+		"base" : {
+			"x" : 1,
+			"y" : 1,
+			"class" : "GuiTextElement",
+			"callbacks" : {
+				
+			}
+		}
+	},
+
+	"totalStatsTitle" : {
+		"base" : {
+			"label" : "Total stats",
+			"x" : 1,
+			"y" : 1,
+			"class" : "GuiTextElement",
+			"callbacks" : {
+				
+			}
+		}
+	}
+
+}

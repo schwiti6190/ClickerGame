@@ -1,0 +1,13 @@
+{
+	"cookieCoin" : {
+		"prefab" : "currency",
+		"base" : {
+			"y" : 1,
+			"label" : "Knop coin: "
+		}
+	},
+
+	"back":{
+		"prefab" : "back"
+	}
+}
