@@ -31,5 +31,5 @@ jobs:
       with:
         branch: gh-pages
         directory: gh-pages
-        github_token: ${{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}}
+        github_token: ${{"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"}}
     # ===============================
