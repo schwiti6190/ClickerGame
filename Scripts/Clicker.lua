@@ -17,7 +17,6 @@ local json = require( "json" )
 
 ---@module Clicker
 Clicker = Class()
----@type boolean
 Clicker.debug = true
 --- every 2 mins
 Clicker.autoSaveInterval = 60*2*1000 
@@ -26,6 +25,7 @@ function Clicker:init()
 	self:setup()
 end
 
+--- Initial setup
 function Clicker:setup()
 	---@type Renderer
 	self.renderer = Renderer(self)
@@ -46,6 +46,7 @@ function Clicker:setup()
 	timer.performWithDelay(self.autoSaveInterval,self,0)
 end
 
+--- Loads save data.
 function Clicker:onLoad()
 	local filePath = system.pathForFile( "scores.json", system.DocumentsDirectory )
 
@@ -67,6 +68,7 @@ function Clicker:onLoad()
 	file = nil
 end
 
+--- Saves data.
 function Clicker:onSave(forceAmount)
 	local path = system.pathForFile( "scores.json", system.DocumentsDirectory )
 
@@ -94,6 +96,7 @@ function Clicker:onSave(forceAmount)
 	file = nil
 end
 
+--- Resets everything to default.
 function Clicker:onReset()
 	self:onSave(0)
 	self:onLoad()
@@ -111,6 +114,7 @@ function Clicker:getUpgradeHandler()
 	return self.upgradeHandler
 end
 
+--- Update loop every second.
 function Clicker:update()
 	self.upgradeHandler:update()	
 	self.itemHandler:update()
@@ -118,6 +122,7 @@ function Clicker:update()
 	self.eventHandler:update()
 end
 
+--- Draw loop every 100 milliseconds.
 function Clicker:draw() 
 	self.renderer:draw()
 end
@@ -128,6 +133,7 @@ function Clicker:timer()
 	self:onSave()
 end
 
+--- Stops the app.
 function Clicker:stop()
 	self:onSave()
 	native.requestExit()
