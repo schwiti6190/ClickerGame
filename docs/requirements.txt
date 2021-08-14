@@ -1,1 +1,1 @@
-https://github.com/boolangery/sphinx-lua.tar.gz
+git+https://github.com/boolangery/sphinx-lua.git
