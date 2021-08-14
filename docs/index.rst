@@ -2,7 +2,7 @@ Welcome to Courseplay's documentation!
 ======================================
 
 .. lua:autoclass:: Clicker
-   :attributes:
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

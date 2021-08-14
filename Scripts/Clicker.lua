@@ -20,7 +20,7 @@ Clicker = Class()
 ---@type boolean
 Clicker.debug = true
 --- every 2 mins
----@type number
+---@field autoSaveInterval number
 Clicker.autoSaveInterval = 60*2*1000 
 
 function Clicker:init()
