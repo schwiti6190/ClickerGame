@@ -17,8 +17,11 @@ local json = require( "json" )
 
 ---@class Clicker
 Clicker = Class()
+---@type boolean
 Clicker.debug = true
-Clicker.autoSaveInterval = 60*2*1000 --- every 2 mins
+--- every 2 mins
+---@type number
+Clicker.autoSaveInterval = 60*2*1000 
 
 function Clicker:init()
 	self:setup()
