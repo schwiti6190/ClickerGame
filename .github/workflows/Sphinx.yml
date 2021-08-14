@@ -1,12 +1,14 @@
 name: "Pull Request Docs Check"
 on: 
-- pull_request
+  push:
+  branches:
+    - main
 
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: schwiti6190/ClickerGame@master
+      uses: actions/checkout@v1
+      uses: schwiti6190/ClickerGame@master
       with:
         docs-folder: "docs/"
