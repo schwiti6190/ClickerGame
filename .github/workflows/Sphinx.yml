@@ -9,4 +9,4 @@ jobs:
     - uses: actions/checkout@v1
     - uses: schwiti6190/ClickerGame@master
       with:
-        docs-folder: "doc/"
+        docs-folder: "docs/"
