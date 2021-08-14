@@ -1,2 +1,2 @@
-git
-git+https://github.com/boolangery/sphinx-lua.git
+
+sphinx-lua @ git+https://github.com/boolangery/sphinx-lua.git
