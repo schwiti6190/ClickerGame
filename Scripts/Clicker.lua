@@ -15,7 +15,7 @@ require("Scripts.Handlers.ShopHandler")
 
 local json = require( "json" )
 
----@class Clicker
+---@module Clicker
 Clicker = Class()
 ---@type boolean
 Clicker.debug = true
