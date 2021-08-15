@@ -1,1 +1,1 @@
-https://github.com/boolangery/sphinx-lua.git
+git+https://github.com/boolangery/sphinx-lua.git
