@@ -1,2 +1,2 @@
-GitPython 
-sphinx-lua @ git+https://github.com/boolangery/sphinx-lua.git
+git
+git+https://github.com/boolangery/sphinx-lua.git

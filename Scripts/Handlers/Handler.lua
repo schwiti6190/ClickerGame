@@ -119,3 +119,22 @@ end
 function Handler:applyElementFactor(element,factor)
 	self.elements[element]:applyFactor(factor)
 end
+
+function Handler:getData()
+	if self.filePathData then
+		return GuiUtils.getDataFromJsonFile(self.filePathData)
+	end
+end
+
+function Handler:enrichElements()
+	local elementsData = self:getData()
+	if elementsData then 
+		for elementName,element in pairs(self.elements) do 
+			if elementsData[elementName] then 
+				for name,data in pairs(elementsData[elementName]) do 
+					element[name] = data
+				end
+			end
+		end
+	end
+end

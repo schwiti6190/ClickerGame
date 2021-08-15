@@ -9,7 +9,7 @@ function GuiUtils.setButtonsFromTable(filePath,renderer,callbackClass)
 	for elementName,Data in pairs(data) do
 		local prefab = Data.prefab and prefabs[Data.prefab]
 		if prefab then 
-			GuiUtils.enrichGuiElementWithPrefab(Data,prefab)
+			GuiUtils.enrichGuiElementWithPrefab(Data,prefab,prefabs)
 		end
 		for _,elementData in pairs(Data) do
 			if type(elementData) == "table" then 
@@ -25,11 +25,16 @@ function GuiUtils.setButtonsFromTable(filePath,renderer,callbackClass)
 	return elements
 end
 
-function GuiUtils.enrichGuiElementWithPrefab(element,prefab)
+function GuiUtils.enrichGuiElementWithPrefab(element,prefab,prefabs)
 	if type(element) == "table" then 
-		for i,subPrefab in pairs(prefab) do 
+		local Prefab = prefab["prefab"] and prefabs[prefab["prefab"]]
+		if Prefab then 
+			GuiUtils.enrichGuiElementWithPrefab(prefab,Prefab,prefabs)
+		end
+		for i,subPrefab in pairs(prefab) do 	
+		
 			if element[i] == nil then element[i] = subPrefab end
-			GuiUtils.enrichGuiElementWithPrefab(element[i],subPrefab)
+			GuiUtils.enrichGuiElementWithPrefab(element[i],subPrefab,prefabs)
 		end
 	end
 end

@@ -1,0 +1,27 @@
+{
+	"cookie" : {
+		"basePrice" : 200,
+		"priceModifier" : 1.6
+
+	},
+	"baker" : {
+		"basePrice" : 1000,
+		"priceModifier" : 1.8
+
+	},
+	"master" : {
+		"basePrice" : 6000,
+		"priceModifier" : 1.95
+
+	},
+	"machine" : {
+		"basePrice" : 20000,
+		"priceModifier" : 2.2
+
+	},
+	"worker" : {
+		"basePrice" : 14000,
+		"priceModifier" : 2.5
+
+	}
+}

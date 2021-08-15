@@ -72,16 +72,7 @@
 		}
 	},
 	"event":{
-		"base":{
-			"y":1,
-			"x":1,
-			"label":"",
-			"callbacks":{
-				"textCall":"getText",
-				"visibleCall":"isVisible"
-			},
-		"class":"GuiTextElement"
-		}
+		"prefab" : "baseTextInteractive"
 	},
 	"back":{
 		"prefab" : "back"

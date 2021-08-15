@@ -1,13 +1,9 @@
 require("Scripts.Upgrades.Upgrade")
-require("Scripts.Upgrades.CookieUpgrade")
-require("Scripts.Upgrades.BakerUpgrade")
-require("Scripts.Upgrades.MasterUpgrade")
-require("Scripts.Upgrades.MachineUpgrade")
-require("Scripts.Upgrades.WorkerUpgrade")
-
 
 ---@class UpgradeHandler : Handler
 UpgradeHandler = Class(Handler)
+
+UpgradeHandler.filePathData = "Scripts/Upgrades/Upgrades.json"
 
 ---@field Upgrades table
 Upgrades = {
@@ -20,11 +16,11 @@ Upgrades = {
 
 ---@field elementsData table
 UpgradeHandler.elementsData = {
-	cookie = CookieUpgrade,
-	baker = BakerUpgrade,
-	master = MasterUpgrade,
-	machine = MachineUpgrade,
-	worker = WorkerUpgrade,
+	cookie = Upgrade,
+	baker = Upgrade,
+	master = Upgrade,
+	machine = Upgrade,
+	worker = Upgrade,
 }
 
 ---@param itemHandler ItemHandler
@@ -34,4 +30,5 @@ function UpgradeHandler:init(clicker,renderer,itemHandler)
 	self:addElements({screen},self,itemHandler)
 	screen:setCallbackClassToElements({buyAmount = self})
 	Handler.init(self,clicker,renderer)
+	self:enrichElements()
 end

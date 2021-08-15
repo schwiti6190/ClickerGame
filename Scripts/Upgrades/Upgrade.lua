@@ -11,6 +11,10 @@ function Upgrade:init(upgradeHandler,itemHandler)
 	self.value = 1
 end
 
+function Upgrade:getData(filePath)
+	local data = GuiUtils.getDataFromJsonFile(filePath)
+end
+
 function Upgrade:getText()
 	return string.format("x%s",GuiUtils.getFormattedMoneyText(self:getModifier()))
 end
@@ -49,7 +53,8 @@ function Upgrade:isDisabled()
 end
 
 function Upgrade:isVisible()
-	return not (self:isDisabled() and self.value == 1)
+	return true
+	--	return not (self:isDisabled() and self.value == 1)
 end
 
 function Upgrade:getBuyAmount()

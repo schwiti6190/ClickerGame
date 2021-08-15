@@ -1,73 +1,83 @@
 {
-	"itemWithPrice":{
-		"base":{
+	"baseText" : {
+		"base" : {
 			"x" : 1,
-			"callbacks":{
-				"textCall":"getText",
-				"onClickCall":"onClick",
-				"disabledCall":"isDisabled",
-				"visibleCall":"isVisible"
+			"y" : 1,
+			"label" : "",
+			"callbacks" : {
+				"textCall":"getText"
 			},
-			"class":"GuiButtonElement"
-		},
-		"price":{
-			"x" : 150,
-			"label":"Price: ",
-			"callbacks":{
-				"textCall":"getPriceText",
-				"disabledCall":"isDisabled",
-				"visibleCall":"isVisible"
-			},
-			"class":"GuiTextElement"
+			"class" : "GuiTextElement"
+		}
+
+	},
+	"baseTextInteractive" : {
+		"prefab" : "baseText",
+		"base" : {
+			"callbacks" : {
+				"visibleCall":"isVisible",
+				"disabledCall" : "isDisabled",
+				"activeCall" : "isActive"
+			}
 		}
 	},
-	"item":{
-		"base":{
+	
+	"baseButton" : {
+		"base" : {
 			"x" : 1,
-			"callbacks":{
+			"y" : 1,
+			"callbacks" : {
 				"textCall":"getText",
-				"onClickCall":"onClick",
-				"disabledCall":"isDisabled",
-				"visibleCall":"isVisible"
-			},
-			"class":"GuiButtonElement"
-		}
-	},
-	"shopItem" : {
-		"base":{
-			"x" : 1,
-			"callbacks":{
 				"onClickCall":"onClick",
 				"disabledCall":"isDisabled",
 				"visibleCall":"isVisible",
 				"activeCall" : "isActive"
 			},
 			"class":"GuiButtonElement"
-		},
-		"price":{
-			"x" : 150,
-			"label":"Price: ",
-			"callbacks":{
-				"textCall":"getPriceText",
+		}
+	},
+	"baseButtonAndText" : {
+		"prefab" : "baseButton",
+		"price" : {
+			"x" : 1,
+			"y" : 1,
+			"callbacks" : {
+				"textCall":"getText",
 				"disabledCall":"isDisabled",
-				"visibleCall":"isPriceVisible",
+				"visibleCall":"isVisible",
 				"activeCall" : "isActive"
 			},
 			"class":"GuiTextElement"
 		}
 	},
+	
+	
+	"itemWithPrice":{
+		"prefab" : "baseButtonAndText",
+		"price":{
+			"x" : 150,
+			"label":"Price: ",
+			"callbacks":{
+				"textCall":"getPriceText"
+			}
+		}
+	},
+	"item":{
+		"prefab" : "baseButton"
+	},
+	"shopItem" : {
+		"prefab" : "itemWithPrice",
+		"price":{
+			"callbacks":{
+				"textCall":"getPriceText",
+				"visibleCall":"isPriceVisible",
+				"activeCall" : "isActive"
+			}
+		}
+	},
 
 	"currency" : {
-		"base" : {
-			"x" : 1,
-			"callbacks" : {
-				"onClickCall" : "onClick",
-				"textCall":"getText",
-				"disabledCall":"isDisabled",
-				"visibleCall":"isVisible"
-			},
-			"class" : "GuiButtonElement"
-		}
+		"prefab" : "baseButton"
 	},
 	"currencyMarket" : {
 		"base" : {
@@ -128,14 +138,9 @@
 		}
 	},
 	"cookieDisplay" : {
+		"prefab" : "baseText",
 		"base" : {
-			"x" : 1,
-			"y" : 1,
-			"label" : "Knoppers: ",
-			"callbacks" : {
-				"textCall":"getText"
-			},
-			"class" : "GuiTextElement"
+			"label" : "Knoppers: "
 		}
 	},
 	"back" : {
@@ -162,50 +167,23 @@
 		}
 	},
 	"stat" : {
+		"prefab" : "baseText",
 		"base" : {
-			"y" : 1,
-			"x" : 1,
-			"label":"Stat: ",
-			"callbacks":{
-				"textCall":"getText"
-			},
-			"class":"GuiTextElement"
+			"label" : "Stat: "
 		}
 	},
 
 	"menuButton" : {
-		"base" : {
-			"class" : "GuiButtonElement",
-			"x" : 1,
-			"y" : 1,
-			"label" : "Setting",
-			"callbacks" : {
-				"disabledCall" : "isDisabled",
-				"visibleCall" : "isVisible",
-				"onClickCall" : "onClickSetting"
-			}
-		}
+		"prefab" : "baseButton"
 	},
 	"title" : {
-		"base" : {
-			"x" : 1,
-			"y" : 1,
-			"class" : "GuiTextElement",
-			"callbacks" : {
-				
-			}
-		}
+		"prefab" : "baseText"
 	},
 
 	"totalStatsTitle" : {
+		"prefab" : "title",
 		"base" : {
-			"label" : "Total stats",
-			"x" : 1,
-			"y" : 1,
-			"class" : "GuiTextElement",
-			"callbacks" : {
-				
-			}
+			"label" : "Total stats"
 		}
 	}
 

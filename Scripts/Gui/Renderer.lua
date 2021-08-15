@@ -25,7 +25,6 @@ GuiElements = {
 function Renderer:init(clicker)
 	self.clicker = clicker
 	self.prefabs = GuiUtils.getDataFromJsonFile(self.prefabsFilePath)
-	GuiUtils.enrichGuiElementWithPrefab(self.prefabs,self.prefabs)
 	self.background = display.newImageRect( "background.png", 360, 570 )
 	self.background.x = display.contentCenterX
 	self.background.y = display.contentCenterY
